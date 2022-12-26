@@ -7,22 +7,37 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="header">
+      <h1>Hello</h1>
+    </div>
     <div id="root"></div>
+    <div ids="footer">
+      <h1>footer</h1>
+    </div>
   </body>
 
   <!-- <script>
+
+    creating heading h1 tag using javascript
     const heading  = document.createElement("h1");
+
+
+    adding text inside the h1 tag
+
 
     heading.innerHTML = "Namaste Everyone from avascript";
 
+    creating root element 
+
     const root = document.getElementById('root');
 
+    appending the heading inside root (id) element
 
     root.appendChild(heading);
 
 
   </script> -->
-
+ 
   <script
     crossorigin
     src="https://unpkg.com/react@18/umd/react.development.js"
@@ -31,4 +46,30 @@
     crossorigin
     src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
   ></script>
+  <script>
+
+    // building h1 tag using react 
+
+    let heading = React.createElement("h1" , {} , "Namaste Everyone");
+
+    // {}  is nothing but object
+
+    // react element heading is nothing but object.
+
+
+    // console.log(heading);
+
+
+   // creating root element 
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+
+   // rendering heading  tag on root
+
+
+   heading.props.children = "Hi";
+   root.render(heading); 
+    
+    
+  </script>
 </html>
