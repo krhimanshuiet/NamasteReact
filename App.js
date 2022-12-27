@@ -41,6 +41,8 @@
   
   
      root.render(container);
+
+     // render function always override the things not appends.
   
     //  root.innerHTML = "hello"
     //  root.render(root.innerHTML);
